@@ -1,8 +1,8 @@
 # Use the official Nginx Alpine image (lightweight and secure)
 FROM nginx:alpine
 
-# Remove the default Nginx configuration file
-RUN rm /etc/nginx/conf.d/default.conf
+# Nginx-এর ডিফল্ট ডিরেক্টরি মুছে ফেলে তা পরিষ্কার করা হচ্ছে (ঐচ্ছিক কিন্তু ভালো অভ্যাস)
+RUN rm -rf /usr/share/nginx/html/* 
 
 # Copy the current directory contents to the Nginx web root
 COPY . /usr/share/nginx/html
