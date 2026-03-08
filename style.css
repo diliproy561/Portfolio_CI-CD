@@ -1,0 +1,48 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+.glass-nav {
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+/* Image Hover Effect */
+.profile-image-container {
+    transition: transform 0.3s ease;
+}
+.profile-image-container:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+/* Typing cursor for AI chat */
+.typing-cursor::after {
+    content: '▋';
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+    color: #38bdf8;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Markdown Styles for AI Output */
+.prose-invert pre {
+    background-color: #0f172a !important;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+    overflow-x: auto;
+}
+.prose-invert code {
+    color: #38bdf8 !important;
+    font-family: 'Fira Code', monospace;
+}
